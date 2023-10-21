@@ -1,4 +1,5 @@
 Project Structure:
+```
 ├── README.md
 ├── docker-compose.yaml
 ├── docker/
@@ -6,31 +7,29 @@ Project Structure:
 │   │   ├── Dockerfile
 │   ├── redis/
 │   │   ├── Dockerfile
-├── .env
+├── .env  # environment variables
 ├── .gitignore
-├── tree.py
 ├── app/
-│   ├── package/
+│   ├── package/  # interaction with other services, not fastapi
 │   │   ├── redis_tools/
-│   │   │   ├── tools.py
+│   │   │   ├── tools.py  # set interaction with redis
 │   │   │   ├── __init__.py
 │   ├── configuration/
 │   │   ├── server.py
 │   │   ├── routes/
-│   │   │   ├── routes.py
+│   │   │   ├── routes.py  # 
 │   │   │   ├── __init__.py
 │   ├── routes/
 │   │   ├── __init__.py
-│   ├── internal/
+│   ├── internal/  # interaction with fastapi
 │   │   ├── events/
-│   │   │   ├── startup.py
+│   │   │   ├── startup.py  # async defs for receiving data from the exchange
 │   │   ├── schemas/
-│   │   │   ├── currency.py
+│   │   │   ├── currency.py  # currency parse classes
 │   │   ├── routes/
-│   │   │   ├── user.py
-│   │   │   ├── currency.py
-│   ├── __init__.py
-
+│   │   │   ├── currency.py  # currency pair getting logic
+│   ├── __init__.py  # FastAPI app creating
+```
 Commands to run app:
 1. git clone git@github.com:mbgoodguy/binance_docker_fastapi_redis.git
 2. 
