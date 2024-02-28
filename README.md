@@ -33,10 +33,10 @@ Project Structure:
 │   ├── __init__.py  # FastAPI app creating
 ```
 Commands to run app:
-1. git clone git@github.com:mbgoodguy/binance_docker_fastapi_redis.git
-2. cd binance_docker_fastapi_redis
-3. docker-compose build
-4. docker-compose up -d
+1. ```git clone git@github.com:mbgoodguy/binance_docker_fastapi_redis.git```
+2. ```cd binance_docker_fastapi_redis```
+3. ```docker-compose build```
+4. ```docker-compose up -d```
 
 Now u can run postman and send GET response to http://127.0.0.1:8000/api/v1/currency/<VALUE_OF_SUMBOL_KEY_FROM_LIST_OF_CURRENCIES>
 
